@@ -126,8 +126,8 @@ drawCanvas();
 }
 
 document.addEventListener("touchstart", mousedown);
-document.addEventListener("mouseup", mouseup);
-document.addEventListener("mouseout", mouseup);
+document.addEventListener("touchend", mouseup);
+document.addEventListener("touchcancel", mouseup);
 
 setInterval(changeCol,2100);
 canwh();
