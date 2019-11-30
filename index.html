@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Happy Birthday</title>
+<title>Happy Birthday !</title>
 <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/birthday-cake_1f382.png" type="image/png">
 <style>
 html,body{
@@ -44,14 +44,13 @@ height:100%;
 var ww,wh,mx,my;
 var can1=document.getElementById("can1");
 var ctx=can1.getContext("2d");
-var col1;
 var mes=["H","A","P","P","Y"," ","B","I","R","T","H","D","A","Y"," ","H","E","L","E","N","E"];
 var x=[];
 var y=[];
 var dx=[];
 var dy=[];
 var col=[];
-var h,i,j,k,fs;
+var h,i,j,k,fs,col;
 var audio=new Audio("https://upload.wikimedia.org/wikipedia/commons/e/e0/Luftr%C3%BCssel.ogg");
 
 ww=window.innerWidth;
@@ -110,12 +109,12 @@ mousedownID=-1;
 }}
 
 function whilemousedown(){
-for(var h=0;h<21;h++){
+for(h=0;h<21;h++){
 if(x[h]<dx[h]){x[h]++;}
 if(x[h]>dx[h]){x[h]--;}
 if(y[h]<dy[h]){y[h]++;}
 if(y[h]>dy[h]){y[h]--;}
-if(x==dx&&y==dy){audio.play();}
+if(x[h]==dx[h]&&y[h]==dy[h]){audio.play();}
 }
 drawCanvas();
 }
