@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Happy Birthday !</title>
+<title>Happy Birthday</title>
 <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/birthday-cake_1f382.png" type="image/png">
 <style>
 html,body{
@@ -40,7 +40,7 @@ user-select: none;
 }
 img{
 opacity:0.2;
-visibility:hidden;
+visibility:hidden;ctx.font="bold "+fs+"px sans-serif";
 }
 </style>
 </head>
@@ -95,7 +95,7 @@ function drawCanvas(){
 ctx.clearRect(0,0,ww,wh);
 for(i=0;i<21;i++){
 ctx.fillStyle=col[i];
-ctx.font="bold 48px sans-serif";
+ctx.font="bold "+fs+"px sans-serif";
 ctx.fillText(mes[i],x[i],y[i]);
 }
 }
