@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Happy Birthday !</title>
+<title>Happy Birthday !!</title>
 <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/birthday-cake_1f382.png" type="image/png">
 <style>
 html,body{
@@ -33,15 +33,6 @@ width:100%;
 height:100%;
 }
 
-#svg1{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
 </style>
 </head>
 
@@ -61,6 +52,7 @@ var dx=[];
 var dy=[];
 var col=[];
 var h,i,j,k,fs;
+var audio=new Audio("https://upload.wikimedia.org/wikipedia/commons/e/e0/Luftr%C3%BCssel.ogg");
 
 ww=window.innerWidth;
 wh=window.innerHeight;
@@ -121,6 +113,7 @@ function whilemousedown(){
 for(var h=0;h<21;h++){
 if(x[h]<dx[h]){x[h]++};if(x[h]>dx[h]){x[h]--};
 if(y[h]<dy[h]){y[h]++};if(y[h]>dy[h]){y[h]--};
+audio.play();
 }
 drawCanvas();
 }
