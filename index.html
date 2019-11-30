@@ -31,18 +31,28 @@ background-repeat: no-repeat;
 background-image:url("http://clipart-library.com/new_gallery/189-1896154_realistic-rainbow-png-circle.png");
 width:100%;
 height:100%;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
-
+img{
+opacity:0.2;
+visibility:hidden;
+}
 </style>
 </head>
 
 <body onmousemove="coor1(event)">
-<div id="div2"></div>
+<div id="div2"><img src="https://i.gifer.com/4M57.gif" width="100%" height="100%" id="firew"/></div>
 <canvas id="can1"></canvas>
 
 <script>
 var ww,wh,mx,my;
 var can1=document.getElementById("can1");
+var firew=document.getElementById("firew");
 var ctx=can1.getContext("2d");
 var mes=["H","A","P","P","Y"," ","B","I","R","T","H","D","A","Y"," ","H","E","L","E","N","E"];
 var x=[];
@@ -100,7 +110,7 @@ col.push("rgba("+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)
 var mousedownID=-1;
 function mousedown(event){
 if(mousedownID==-1)
-mousedownID = setInterval(whilemousedown, 5);
+mousedownID = setInterval(whilemousedown,5);
 }
 
 function mouseup(event) {
@@ -115,7 +125,7 @@ if(x[h]<dx[h]){x[h]++;}
 if(x[h]>dx[h]){x[h]--;}
 if(y[h]<dy[h]){y[h]++;}
 if(y[h]>dy[h]){y[h]--;}
-if(x.join()==dx.join()&&y.join()==dy.join()){audio1.play();audio2.play()}
+if(x.join()==dx.join()&&y.join()==dy.join()){audio1.play();audio2.play();firew.style.visibility="visible"}
 }
 drawCanvas();
 }
@@ -128,7 +138,7 @@ document.addEventListener("mousedown", mousedown);
 document.addEventListener("mouseup", mouseup);
 document.addEventListener("mouseout", mouseup);
 
-setInterval(changeCol,2100);
+setInterval(changeCol,400);
 canwh();
 drawCanvas();
 </script>
