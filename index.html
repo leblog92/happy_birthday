@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Happy Birthday !!</title>
+<title>Happy Birthday</title>
 <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/softbank/145/birthday-cake_1f382.png" type="image/png">
 <style>
 html,body{
@@ -111,9 +111,11 @@ mousedownID=-1;
 
 function whilemousedown(){
 for(var h=0;h<21;h++){
-if(x[h]<dx[h]){x[h]++};if(x[h]>dx[h]){x[h]--};
-if(y[h]<dy[h]){y[h]++};if(y[h]>dy[h]){y[h]--};
-audio.play();
+if(x[h]<dx[h]){x[h]++;}
+if(x[h]>dx[h]){x[h]--;}
+if(y[h]<dy[h]){y[h]++;}
+if(y[h]>dy[h]){y[h]--;}
+if(x==dx&&y==dy){audio.play();}
 }
 drawCanvas();
 }
