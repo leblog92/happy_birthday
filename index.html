@@ -51,7 +51,8 @@ var dx=[];
 var dy=[];
 var col=[];
 var h,i,j,k,fs,col;
-var audio=new Audio("https://upload.wikimedia.org/wikipedia/commons/e/e0/Luftr%C3%BCssel.ogg");
+var audio1=new Audio("https://upload.wikimedia.org/wikipedia/commons/e/e0/Luftr%C3%BCssel.ogg");
+var audio2=new Audio("https://freesound.org/data/previews/391/391869_2596106-lq.mp3");
 
 ww=window.innerWidth;
 wh=window.innerHeight;
@@ -114,7 +115,7 @@ if(x[h]<dx[h]){x[h]++;}
 if(x[h]>dx[h]){x[h]--;}
 if(y[h]<dy[h]){y[h]++;}
 if(y[h]>dy[h]){y[h]--;}
-if(x[h]==dx[h]&&y[h]==dy[h]){audio.play();}
+if(x.join()==dx.join()&&y.join()==dy.join()){audio1.play();audio2.play()}
 }
 drawCanvas();
 }
@@ -122,6 +123,10 @@ drawCanvas();
 document.addEventListener("touchstart", mousedown);
 document.addEventListener("touchend", mouseup);
 document.addEventListener("touchcancel", mouseup);
+
+document.addEventListener("mousedown", mousedown);
+document.addEventListener("mouseup", mouseup);
+document.addEventListener("mouseout", mouseup);
 
 setInterval(changeCol,2100);
 canwh();
